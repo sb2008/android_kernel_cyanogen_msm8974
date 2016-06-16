@@ -372,7 +372,17 @@ KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
 		   -fno-strict-aliasing -fno-common \
 		   -Werror-implicit-function-declaration \
 		   -Wno-format-security \
-		   -fno-delete-null-pointer-checks
+                   -Wno-unused-variable \
+                   -Wno-discarded-qualifiers \
+                   -Wno-maybe-uninitialized \
+		   -fno-delete-null-pointer-checks \
+		   -mcpu=cortex-a15 -mtune=cortex-a15 -mfpu=neon-vfpv4 -marm \
+		   -ffast-math -fsingle-precision-constant \
+		   -fgcse-lm -fgcse-sm -fsched-spec-load -fforce-addr \
+		   -Wno-bool-compare -Wno-logical-not-parentheses \
+		   -Wno-misleading-indentation -Wno-unused-const-variable \
+		   -Wno-tautological-compare -Wno-return-type -Wno-shift-overflow
+
 KBUILD_AFLAGS_KERNEL :=
 KBUILD_CFLAGS_KERNEL :=
 KBUILD_AFLAGS   := -D__ASSEMBLY__
