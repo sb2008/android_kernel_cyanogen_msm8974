@@ -84,8 +84,3 @@ GTAGS
 *.orig
 *~
 \#*#
-*.c
-include/linux/netfilter_ipv4/ipt_ttl.h
-*.h
-include/linux/netfilter/xt_connmark.h
-*.h
